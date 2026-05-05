@@ -1,5 +1,4 @@
-```javascript id="updated-login-js"
-// Login.js
+
 import { useState } from "react";
 import { useNavigate, Link } from "react-router-dom";
 import API from "../api/axios";
@@ -66,4 +65,4 @@ function Login() {
 }
 
 export default Login;
-```
+
