@@ -1,3 +1,4 @@
+// Register.js
 import { useState } from "react";
 import { useNavigate, Link } from "react-router-dom";
 import API from "../api/axios";
@@ -13,7 +14,7 @@ function Register() {
     e.preventDefault();
 
     try {
-      await API.post("/auth/register", {
+      await API.post("/api/auth/register", {
         username,
         email,
         password,
@@ -29,7 +30,6 @@ function Register() {
   return (
     <div className="auth-container">
       <div className="auth-card glass">
-
         <h2 className="auth-title">Create Account ✨</h2>
         <p className="auth-sub">Start your learning journey</p>
 
@@ -65,7 +65,6 @@ function Register() {
         <p className="auth-footer">
           Already have an account? <Link to="/">Login</Link>
         </p>
-
       </div>
     </div>
   );

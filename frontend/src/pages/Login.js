@@ -1,3 +1,4 @@
+
 import { useState } from "react";
 import { useNavigate, Link } from "react-router-dom";
 import API from "../api/axios";
@@ -12,7 +13,7 @@ function Login() {
     e.preventDefault();
 
     try {
-      const res = await API.post("/auth/login", {
+      const res = await API.post("/api/auth/login", {
         email,
         password,
       });
@@ -30,7 +31,6 @@ function Login() {
   return (
     <div className="auth-container">
       <div className="auth-card glass">
-
         <h2 className="auth-title">📚 Smart Study Deck</h2>
         <p className="auth-sub">Welcome back 👋</p>
 
@@ -59,7 +59,6 @@ function Login() {
         <p className="auth-footer">
           Don't have an account? <Link to="/register">Register</Link>
         </p>
-
       </div>
     </div>
   );
