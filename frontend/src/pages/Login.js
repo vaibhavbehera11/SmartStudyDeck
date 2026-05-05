@@ -1,4 +1,5 @@
-
+```javascript id="updated-login-js"
+// Login.js
 import { useState } from "react";
 import { useNavigate, Link } from "react-router-dom";
 import API from "../api/axios";
@@ -13,7 +14,7 @@ function Login() {
     e.preventDefault();
 
     try {
-      const res = await API.post("/api/auth/login", {
+      const res = await API.post("/auth/login", {
         email,
         password,
       });
@@ -65,3 +66,4 @@ function Login() {
 }
 
 export default Login;
+```
